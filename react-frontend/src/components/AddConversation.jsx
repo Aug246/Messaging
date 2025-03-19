@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect, use } from "react";
+import { getCSRFToken } from "./auth";
 
 
 
@@ -29,6 +30,35 @@ function AddConversation() {
                 }
             });
         }
+    }
+
+    const sendNewConversation = async () => {
+        var conversationExists;
+        
+        try {
+            const response = await fetch("http://127.0.0.1:8000/users/userexists/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRFToken": getCSRFToken()
+                },
+                credentials: 'include',
+                body: JSON.stringify({ username: `${name.value}`})
+            })
+    
+            try {
+                const data = await response.json();
+
+            } catch (jsonError) {
+                
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            
+        }
+
+
+
     }
     return(
         <>
