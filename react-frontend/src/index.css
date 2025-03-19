@@ -1,0 +1,333 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+.topbar {
+  background-color: #202634; 
+  color: rgb(255, 255, 255);              
+  padding: 5px;            
+  text-align: left;      
+  position: fixed;          
+  top: 0;                   
+  left: 0;                  
+  width: 100%;              
+  height: 90px;
+}
+
+.topbar .topbar-text a{
+  margin-left: 10px;
+  color: white;   
+  background-color: #202634;     
+  text-decoration: none; 
+}
+
+.topbar .topbar-text a:visited {
+  color: white;       
+}
+
+
+/*________________________________________
+Login and Register Pop Up CSS*/
+
+.login-popup {
+  width: 450px;                
+  height: 450px;               
+  background-color: #252a38;   
+  color: white;               
+  border-radius: 10px;         
+  position: absolute;           
+  top: 50%;                    
+  left: 50%;                   
+  transform: translate(-50%, -50%);
+  display: flex;               
+  flex-direction: column;      
+  align-items: center;         
+  justify-content: center; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);  
+   
+}
+
+.login-popup .welcome-text {
+  color: white;
+
+}
+
+.login-label {
+  color: #c8d2e9; 
+}
+
+#username-input, #password-input, #firstname-input, #lastname-input {
+  width: 300px;
+  padding: 10px; 
+  margin-top: 5px; 
+  margin-bottom: 10px;
+  border-radius: 5px; 
+  border: 1px solid #ffffff00; 
+  background-color: #949ca9;
+
+}
+
+.newacc-link {
+  color: white; 
+  text-align: center; 
+
+}
+
+.newacc-link a:visited {
+  color: white;       
+}
+
+
+.login-button {
+  background-color: #606c87; 
+  color: white;              
+  cursor: pointer;
+  width: 322px;
+  padding: 10px; 
+  margin-top: 5px; 
+  margin-bottom: 20px;
+  border-radius: 5px; 
+  border: 1px solid #ffffff00;         
+}
+
+.login-button:hover {
+  background-color: #505e78; 
+}
+
+#wrong-text {
+  width: 300px;
+  position: relative;
+  left: -10px;
+  color: red;
+  font-size: smaller;
+  padding: 0px;
+}
+
+/*_________________________________________________
+Page Not Found CSS*/
+
+.notfound-text {
+  position: absolute;
+  top: 50%;                    
+  left: 50%;                   
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+/*______________________________________________
+MessageBar CSS */
+
+.message-bar {
+  background-color: #252a38a3;
+  color: white;
+  position: fixed;
+  padding-top: 40px;
+  top: 100px;
+  left: 0;
+  height: 100%;
+  width: 400px;
+  display: flex;
+  overflow: auto;
+}
+
+
+.message-bar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.message-bar::-webkit-scrollbar-track {
+  background: #252a38;
+}
+
+.message-bar::-webkit-scrollbar-thumb {
+  background-color: #505e78;
+  border-radius: 10px;
+  border: 2px solid #252a38;
+}
+
+.message-bar::-webkit-scrollbar-thumb:hover {
+  background-color: #404b60;
+}
+
+.conversation {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  padding: 10px;
+  width: 400px;
+  height: 100px;
+  border-bottom: 1px solid #888888;
+  gap: 10px;
+}
+
+.conversation-initial {
+  display: flex;
+  justify-content: center;
+  align-items: center;                     
+  width: 60px;                
+  height: 60px;   
+  border-radius: 50%;            
+  background-color: rgb(140, 147, 159);   
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-size: 35px; 
+  text-transform: capitalize;
+  grid-column: 1;
+  grid-row: 1 / span 2; 
+  align-self: center; 
+}
+
+
+.conversation-title {
+  display: flex;
+  align-items: flex-start;
+  width:100%;
+  margin: 0px;
+  grid-column: 2;
+  grid-row: 1;
+}
+.conversation-text {
+  display: flex;
+  align-items: flex-start;
+  grid-column: 2;
+  grid-row: 2;
+  width: 100%;
+}
+
+
+/*________________________________________
+Create Conversation CSS */
+
+.create-conversation {
+  width: 50px;
+  height: 50px;
+  font-size: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed; 
+  top: 110px;    
+  left: 340px;    
+  background-color: #505e78;
+  font-size: xx-large;
+  color: white;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.create-conversation:hover {
+  background-color: #404b60;
+}
+
+.new-conversation-field {
+  display: none;
+  flex-direction: column;
+  align-items: center;         
+  width: 500px;                
+  height: 400px;               
+  background-color: #20334f;   
+  color: white;               
+  border-radius: 10px;         
+  position: absolute;           
+  top: 50%;                    
+  left: 50%;    
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+}
+
+@keyframes popup-grow {
+  0% {
+      transform: translate(-250px, -200px) scale(0.8);
+      opacity: 0.5;
+  }
+  100% {
+      transform: translate(-250px, -200px) scale(1);
+      opacity: 1;
+  }
+}
+
+@keyframes popup-shrink {
+  0% {
+      transform: translate(-250px, -200px) scale(1);
+      opacity: 1;
+  }
+  100% {
+      transform: translate(-250px, -200px) scale(0);
+      opacity: 0;
+  }
+}
+.new-conversation-field.show {
+  display: flex;
+  animation: popup-grow 0.1s ease-out;
+}
+
+.new-conversation-field.hide {
+  display: flex;
+  animation: popup-shrink 0.2s ease-in;
+}
+
+
+.close-field {
+  align-self: flex-end;
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  position: fixed;    
+  background-color: #505e78;
+  font-size: xx-large;
+  color: white;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.close-field:hover {
+  background-color:#404b60;
+}
+
+.new-message-text {
+  margin-top: 80px;
+  margin-bottom: 10px;
+
+}
+.friend-text{
+  font-size: small;
+  color: #c8d2e9;
+  margin-bottom: 30px;
+}
+
+.new-conversation-button {
+  background-color: #606c87; 
+  color: white;              
+  cursor: pointer;
+  width: 320px;
+  padding: 10px; 
+  border: 1px solid #ffffff00;  
+  font-size: small;       
+}
+
+.new-conversation-button:hover {
+  background-color: #505e78; 
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: none; 
+}

@@ -1,0 +1,112 @@
+body {
+    position: relative;          
+    height: 100vh;             
+    margin: 0; 
+    background-image: url('src/background.jpg');
+    background-size: cover;                  
+    background-position: center;             
+    background-repeat: no-repeat;
+}
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.topBar {
+    background-color: #252a38a3; 
+    color: white;              
+    padding: 5px;            
+    text-align: left;      
+    position: fixed;          
+    top: 0;                   
+    left: 0;                  
+    width: 100%;              
+    z-index: 1000;            
+}
+
+.heading a {
+    margin-left: 10px;
+    color: white;       
+    text-decoration: none; 
+}
+
+.heading a:visited {
+    color: white;       
+}
+ 
+.rounded-rectangle {
+    width: 500px;                
+    height: 400px;               
+    background-color: #252a38ae;   
+    color: white;               
+    border-radius: 10px;         
+    position: absolute;           
+    top: 50%;                    
+    left: 50%;                   
+    transform: translate(-50%, -50%);
+    display: flex;               
+    flex-direction: column;      
+    align-items: center;         
+    justify-content: center; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);        
+}
+
+
+
+.input-group {
+    transform: translateY(0px); 
+}
+.input {
+    color: #c8d2e9; 
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 10px; 
+    margin-top: 5px; 
+    margin-bottom: 10px;
+    border-radius: 5px; 
+    border: 1px solid #ffffff00; 
+    background-color: #949ca9;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+}
+
+p {
+    color: white; 
+    text-align: center; 
+    margin-top: 10px;
+    transform: translateY(-50px); 
+
+}
+
+.loginButton {
+    background-color: #606c87; 
+    color: white;              
+    cursor: pointer;
+    width: 322px;
+    padding: 10px; 
+    margin-top: 5px; 
+    margin-bottom: 10px;
+    border-radius: 5px; 
+    border: 1px solid #ffffff00;         
+}
+
+.loginButton:hover {
+    background-color: #505e78; /* Optional: Change background on hover for visual feedback */
+}
+
+#createAccLink{
+    color: #427fbd;
+}
+
+#wrong {
+    color: red;
+    transform: translate(-93px ,-5px);
+    font-size: smaller;
+    padding: 0px;
+    visibility: hidden;
+}
+
+
+
+
+

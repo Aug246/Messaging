@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class=topBar> <h1 class="heading"> <a href="login.html">COMMUNICATION</a> </h1> </div>
+    <div class="rounded-rectangle">
+        <h2 id="welcome">Welcome back!</h2>
+    
+        <div class="input-group">
+            <label for="username" class="input"> <b>Username</b> </label>
+            <br>
+            <input type="text" name="username" id="username">
+        </div>
+        <div class="input-group">
+            <label for="password" class="input"> <b>Password</b> </label>
+            <br>
+            <input type="text" name="password" id="password"> 
+            <br>
+            <button class="loginButton" onclick="login()">Login</button>
+        </div>
+        <b id ='wrong'>Wrong Username or Password*</b>
+        <p>New User? <a href="createaccount.html" id="createAccLink">Create account</a></p>
+
+        <input type="hidden" id="csrf-token">
+        <script src="setcsrf.js"></script>
+        <script src="auth.js"></script>
+    </div>
+
+    
+
+</body>
+
+</html>
